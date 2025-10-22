@@ -62,6 +62,21 @@ section {
     margin-bottom: 3rem;
     animation: fadeInUp 1.5s ease;
 }
+.project h3.GameHeader:contains("Plugin/Modules") + .media-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.project h3.GameHeader:contains("Plugin/Modules") + .media-grid .media img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project h3.GameHeader:contains("Plugin/Modules") + .media-grid .media {
+    padding: 0.5rem;
+}
 
 header h1 {
     transition: all 0.2s ease-in-out;
@@ -151,6 +166,12 @@ footer {
   gap: 2rem;
   justify-items: center;
 }
+.media-grid-compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
 
 .media {
   text-align: center;
@@ -160,6 +181,11 @@ footer {
   grid-column: 1 / -1;
   justify-self: center;
 }
+.media-grid-compact:has(.media:nth-child(3n + 1):last-child) .media:last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
 
 .media img,
 .media video {
@@ -182,7 +208,7 @@ footer {
   transform: scale(1.03);
 }
 
-.project.compact .media-grid {
+.project.compact .media-grid .media-grid-compact {
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     padding: 0 1rem;
@@ -200,6 +226,12 @@ footer {
 .project.compact .media video:hover,
 .project.compact .media img:hover {
     transform: scale(1);
+}
+
+.plugins-modules .media img {
+    width: 70%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
 /* Animations */
