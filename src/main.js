@@ -55,7 +55,7 @@ async function initViewer() {
         scene.add(backLight);
         
         const mtlLoader = new MTLLoader();
-        mtlLoader.setResourcePath('/images');
+        mtlLoader.setResourcePath('/');
         
         // Carica il file MTL
         mtlLoader.load('/models/SimoAvatar.mtl', (materials) => {
