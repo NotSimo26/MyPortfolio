@@ -58,7 +58,7 @@ async function initViewer() {
         mtlLoader.setResourcePath('./../assets/');
         
         // Carica il file MTL
-        mtlLoader.load('./../assets/SimoAvatar.mtl', (materials) => {
+        mtlLoader.load('./../public/models/SimoAvatar.mtl', (materials) => {
             materials.preload();
             
             // fix alpha map 
@@ -70,7 +70,7 @@ async function initViewer() {
             objLoader.setMaterials(materials);
             
             // Carica il file OBJ
-            objLoader.load('./../assets/SimoAvatar.obj', (object) => {
+            objLoader.load('./../public/models/SimoAvatar.obj', (object) => {
                 const box = new THREE.Box3().setFromObject(object);
                 const center = box.getCenter(new THREE.Vector3());
                 const size = box.getSize(new THREE.Vector3());
