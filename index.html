@@ -3,214 +3,298 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simo | Roblox Developer</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Simo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.ico">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/style.css">
+
+    <!-- 3D viewer -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1>Simo</h1>
-        <p>Roblox Developer Portfolio</p>
-    </header>
+    <div class="wrapper">
+        <!-- NAVBAR -->
+        <header class="navbar">
+            <div class="navbar__logo">
+                <span>SimoDevv</span>
+            </div>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+            <nav class="navbar__links">
+                <a href="#about" class="navbar__link">About me</a>
+                <a href="#games" class="navbar__link">My projects</a>
+                <a href="#plugins" class="navbar__link">My plugins</a>
+                <a href="#contact" class="btn-primary">Contact me ↗</a>
+            </nav>
+        </header>
 
-    <section id="about">
-        <h2 class="ParagraphHeading">About Me</h2>
-        <p>Hi! I’m Simo, a 19-year-old Roblox developer from Italy. I studied Computer Science in high school and earned
-            my
-            diploma, now i'm currently studying computer science at university. I specialize in Fullstack development
-            with Roblox Luau, and I also have experience with several
-            other programming languages, including Java, JS, C++, and Python.
+        <!-- ABOUT -->
+        <section id="about" class="section">
+            <div class="section-heading">
+                <h1>About <span>me</span></h1>
+                <p>
+                    Hi! I’m Simo, a 19-year-old Roblox developer from Italy.
+                    I studied Computer Science in high school and earned my diploma,
+                    now I'm currently studying computer science at university. I specialize
+                    in fullstack development with Roblox Luau, and I also have experience with 
+                    several other programming languages, including Java, JS, C++, and Python. I
+                    began developing on Roblox in June 2022 as a scripter. Thanks to my prior programming 
+                    knowledge, I was able to quickly grow my skills, and I now have 3 years of experience
+                    in scripting within the Roblox ecosystem.
+                </p>
+            </div>
+        </section>
 
-            I began developing on Roblox in June 2022 as a scripter. Thanks to my prior programming knowledge, I was
-            able to quickly grow my skills, and I now have 3 years of experience in scripting within the Roblox
-            ecosystem.
-        </p>
-    </section>
+        <!-- MY PROJECTS -->
+        <section id="games" class="section">
+            <div class="section-heading">
+                <h2>My <span>projects</span></h2>
+            </div>
 
-    <section id="projects">
-        <h2 class="ParagraphHeading">My Projects</h2>
-        <br>
-        <div class="project">
-            <h3 class="GameHeader">Horror Game</h3>
-            <div class="media-grid">
-                <div class="media">
-                    <video preload="auto" controls
-                        src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781549/MainMenu_wweydw.mp4"></video>
-                    <p>Main Menu</p>
-                </div>
-                <div class="media">
-                    <video preload="auto" controls
-                        src="https://res.cloudinary.com/dld7r4tjb/video/upload/Recording_2025-11-23_034138_ixizre.mp4"></video>
-                    <p>PathFinding System</p>
+            <!-- PROJECT BUTTONS -->
+            <div class="projects-tabs">
+                <button class="project-tab active" data-project="project1">Horror Game</button>
+                <button class="project-tab" data-project="project2">Clickmare Horror</button>
+                <button class="project-tab" data-project="project3">BallTogether 2P Obby</button>
+                <button class="project-tab" data-project="project4">RNG Game</button>
+                <button class="project-tab" data-project="project6">Misc.</button>
+            </div>
+
+            <!-- PROJECT 1 -->
+            <div id="project1" class="project-panel active">
+                <h3 class="project-title">Horror Game</h3>
+                <div class="media-grid">
+                    <div class="video-box">
+                        <video src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781549/MainMenu_wweydw.mp4" controls></video>
+                        <p class="media-caption">Main Menu</p>
+                    </div>
+
+                    <div class="video-box">
+                        <video src="https://res.cloudinary.com/dld7r4tjb/video/upload/Recording_2025-11-23_034138_ixizre.mp4"    controls></video>
+                        <p class="media-caption">PathFinding System</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="project">
-            <h3 class="GameHeader">Clickmare Horror Game</h3>
-            <div class="media-grid">
-                <div class="media">
-                    <video preload="auto" controls
-                        src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781299/Base_vmec53.mp4"></video>
-                    <p>Main Showcase</p>
-                </div>
-                <div class="media">
-                    <video preload="auto" controls
-                        src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781283/Curtains_bycdxf.mp4"></video>
-                    <p>Curtains Animation</p>
-                </div>
-                <div class="media">
-                    <video preload="auto" controls
-                        src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781300/Event_zarcra.mp4"></video>
-                    <p>Event</p>
-                </div>
-            </div>
-            <div class="project-links">
-                <a href="https://www.roblox.com/games/18225815621/ClickMare" target="_blank"
-                    class="project-button">Game Link</a>
-            </div>
-        </div>
-        <div class="project">
-            <h3 class="GameHeader">BallTogether 2 Player Obby (SOLD)</h3>
-            <div class="media-grid">
-                <div class="media">
-                    <video preload="auto" controls
-                        src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781418/Movement_i56uub.mp4"></video>
-                    <p>MovementSystem</p>
-                </div>
-                <div class="media">
-                    <video preload="auto" controls
-                        src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781428/Friction_mjuxqv.mp4"></video>
-                    <p>Friction System on ice surface</p>
-                </div>
-                <div class="media">
-                    <video preload="auto" controls
-                        src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781317/Mine_lmfba7.mp4"></video>
-                    <p>Mine Placement</p>
-                </div>
-                <div class="media">
-                    <video preload="auto" controls
-                        src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781348/Preview_qjqxbf.mp4"></video>
-                    <p>Game Preview</p>
-                </div>
-            </div>
-            <div class="project-links">
-                <a href="https://www.roblox.com/games/116752486537781/Ball-Together-2-Player-Ball-Obby" target="_blank"
-                    class="project-button">Game Link</a>
-            </div>
-        </div>
-        <div class="project">
-            <h3 class="GameHeader">RNG Game (unfinished and cancelled Project)</h3>
-            <div class="media-grid">
-                <div class="media">
-                    <video preload="auto" controls
-                        src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1761097910/Showcase_xuolcl.mp4"></video>
-                    <p>Game Preview</p>
-                </div>
-                <div class="media">
-                    <video preload="auto" controls
-                        src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781431/npc_pdteml.mp4"></video>
-                    <p>Npc System</p>
-                </div>
-                <div class="media">
-                    <video preload="auto" controls
-                        src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781429/Cutscene_u3z8or.mp4"></video>
-                    <p>Cutscene</p>
-                </div>
-                <div class="media">
-                    <img src="images/noFilter.webp" alt="Thumbnail">
-                    <p>Thumbnail</p>
-                </div>
-            </div>
-            <div class="project-links">
-                <a href="https://www.roblox.com/games/16319523883/Anime-Auras" target="_blank"
-                    class="project-button">Game Link</a>
-            </div>
-        </div>
-        <div class="project">
-            <h3 class="GameHeader">Simulator Soccer</h3>
-            <div class="media-grid">
-                <div class="media">
-                    <video preload="auto" controls
-                        src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781553/Showcase_qhl2lx.mp4"></video>
-                    <p>Game Preview</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="project plugins-modules">
-            <h3 class="GameHeader">Plugin/Modules</h3>
-            <div class="media-grid">
-                <div class="media">
-                    <a href="https://devforum.roblox.com/t/luau-schema-validator-lsv/3426387">
-                        <img src="https://res.cloudinary.com/dld7r4tjb/image/upload/v1761094781/Nuovo_progetto_57_ablwo1.png"
-                            alt="Luau Schema Validator">
-                    </a>
-                    <p>Luau Schema Validator</p>
-                </div>
-                <div class="media">
-                    <a href="https://create.roblox.com/store/asset/82522986593090">
-                        <img src="https://res.cloudinary.com/dld7r4tjb/image/upload/v1761094781/Nuovo_progetto_58_ujlexo.png"
-                            alt="SetMassPlugin">
-                    </a>
-                    <p>SetMassPlugin</p>
+            <!-- PROJECT 2 -->
+            <div id="project2" class="project-panel">
+                <h3 class="project-title">Clickmare Horror Game</h3>
+                <div class="media-grid">
+                    <div class="video-box">
+                        <video src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781299/Base_vmec53.mp4" controls></video>
+                        <p class="media-caption">Main Showcase</p>
+                    </div>
+
+                    <div class="video-box">
+                        <video src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781283/Curtains_bycdxf.mp4" controls></video>
+                        <p class="media-caption">Curtains Animation</p>
+                    </div>
+
+                    <div class="video-box">
+                        <video src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781300/Event_zarcra.mp4" controls></video>
+                        <p class="media-caption">Event</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
+            <!-- PROJECT 3 -->
+            <div id="project3" class="project-panel">
+                <h3 class="project-title">BallTogether 2 Player Obby (SOLD)</h3>
+                <div class="media-grid">
+                    <div class="video-box">
+                        <video src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781418/Movement_i56uub.mp4" controls></video>
+                        <p class="media-caption">Movement System</p>
+                    </div>
 
-        <div class="project compact">
-            <h3 class="GameHeader">Miscellaneous</h3>
-            <div class="media-grid-compact">
-                <div class="media">
-                    <video preload="auto" controls
-                        src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781442/PunchBall_ze7qkr.mp4"></video>
-                    <p>PunchBall System</p>
-                </div>
-                <div class="media">
-                    <video preload="auto" controls
-                        src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781438/CarrySystem_wzirfy.mp4"></video>
-                    <p>Carry System</p>
-                </div>
-                <div class="media">
-                    <video preload="auto" controls
-                        src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781389/Compass_cbcgob.mp4"></video>
-                    <p>Compass System (Trigonometry)</p>
-                </div>
-                <div class="media">
-                    <video preload="auto" controls
-                        src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781417/FightSystem_cpu2ey.mp4"></video>
-                    <p>Fight System Heavily inspired by HBG</p>
+                    <div class="video-box">
+                        <video src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781428/Friction_mjuxqv.mp4" controls></video>
+                        <p class="media-caption">Friction System on ice surface</p>
+                    </div>
+
+                    <div class="video-box">
+                        <video src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781317/Mine_lmfba7.mp4" controls></video>
+                        <p class="media-caption">Mine Placement</p>
+                    </div>
+
+                    <div class="video-box">
+                        <video src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781348/Preview_qjqxbf.mp4" controls></video>
+                        <p class="media-caption">Game Preview</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </section>
+            <!-- PROJECT 4 -->
+            <div id="project4" class="project-panel">
+                <h3 class="project-title">RNG Game (unfinished & cancelled)</h3>
+                <div class="media-grid">
+                    <div class="video-box">
+                        <video src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1761097910/Showcase_xuolcl.mp4" controls></video>
+                        <p class="media-caption">Game Preview</p>
+                    </div>
 
-    <section id="contact">
-        <h2 class="ParagraphHeading">Contact Me</h2>
-        <div class="contact-buttons">
-            <a href="https://discord.com/users/420273473110409216" target="_blank">
-                <img src="images/discord-icon.png" alt="Discord" class="icon-button">
-            </a>
-            <a href="https://www.roblox.com/users/2689009803/profile" target="_blank">
-                <img src="images/roblox-icon.png" alt="Roblox" class="icon-button">
-            </a>
-        </div>
-    </section>
+                    <div class="video-box">
+                        <video src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781431/npc_pdteml.mp4" controls></video>
+                        <p class="media-caption">Npc System</p>
+                    </div>
 
-    <footer>
-        <p>&copy; 2025 Simo</p>
-    </footer>
-    <script src="header-animator.js"></script>
+                    <div class="video-box">
+                        <video src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781429/Cutscene_u3z8or.mp4" controls></video>
+                        <p class="media-caption">Cutscene</p>
+                    </div>
+
+                    <div class="image-box">
+                        <img src="./assets/Thumbnail.jpg" alt="RNG thumbnail">
+                        <p class="media-caption">Original thumbnail concept for the game</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 5 -->
+            <div id="project6" class="project-panel">
+                <h3 class="project-title">Other systems & prototypes</h3>
+                <div class="media-grid">
+                    <div class="video-box">
+                        <video src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781442/PunchBall_ze7qkr.mp4" controls></video>
+                        <p class="media-caption">PunchBall System</p>
+                    </div>
+
+                    <div class="video-box">
+                        <video src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781438/CarrySystem_wzirfy.mp4" controls></video>
+                        <p class="media-caption">Carry System</p>
+                    </div>
+
+                    <div class="video-box">
+                        <video src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781389/Compass_cbcgob.mp4" controls></video>
+                        <p class="media-caption">Compass System (Trigonometry)</p>
+                    </div>
+
+                    <div class="video-box">
+                        <video src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781417/FightSystem_cpu2ey.mp4" controls></video>
+                        <p class="media-caption">Fight System Heavily inspired by HBG</p>
+                    </div>
+                    <div class="video-box">
+                        <video src="https://res.cloudinary.com/dld7r4tjb/video/upload/Screen_Recording_2026-02-02_001446_rxraep" controls></video>
+                        <p class="media-caption">Optimized Video sharing system inside roblox (used an external python server)</p>
+                    </div>
+                    <div class="video-box">
+                        <video src="https://res.cloudinary.com/dld7r4tjb/video/upload/v1752781553/Showcase_qhl2lx.mp4" controls></video>
+                        <p class="media-caption">Soccer Simulator kick system (using bezier curve)</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MY PLUGINS -->
+        <section id="plugins" class="section">
+            <div class="section-heading">
+                <h2>My <span>plugins</span></h2>
+            </div>
+
+            <div class="plugins-grid">
+                <!-- PLUGIN 1 -->
+                <a href="https://create.roblox.com/store/asset/82522986593090" class="plugin-card" target="_blank">
+                    <img src="./assets/SetMassPlugin.png" alt="Plugin 1" class="plugin-image">
+                    <p class="plugin-title">SetMassPlugin</p>
+                </a>
+
+                <!-- PLUGIN 2 -->
+                <a href="https://devforum.roblox.com/t/luau-schema-validator-lsv/3426387" class="plugin-card" target="_blank">
+                    <img src="./assets/Luau Validator.png" alt="Plugin 2" class="plugin-image">
+                    <p class="plugin-title">Luau Schema Validator</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- AVATAR + TIME -->
+        <section id="avatar-section" class="section avatar-section">
+            <div class="section-heading">
+                <h2>Contact <span>me</span></h2>
+            </div>
+
+            <canvas id="canvasViewer"></canvas>
+
+            <p class="time-label">My current time is</p>
+            <p id="clock" class="time-value">00:00:00</p>
+        </section>
+
+        <!-- CONTACT BUTTONS -->
+        <section id="contact" class="section contact-section">
+            <div class="socials">
+                <a class="social-btn social-btn--discord" href="https://discord.com/users/420273473110409216" target="_blank">
+                    <img src="./assets/discord-icon.png" alt="Discord icon" class="social-icon">
+                    <span>Discord</span>
+                </a>
+
+                <a class="social-btn social-btn--roblox" href="https://www.roblox.com/users/2689009803/profile" target="_blank">
+                    <img src="./assets/roblox-icon.png" alt="Roblox icon" class="social-icon">
+                    <span>Roblox</span>
+                </a>
+            </div>
+        </section>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+    <script>
+    
+        const projectTabs = document.querySelectorAll(".project-tab");
+        const projectPanels = document.querySelectorAll(".project-panel");
+
+        projectTabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                const targetId = tab.dataset.project;
+
+                // If already active, still play a small pop animation
+                if (tab.classList.contains("active")) {
+                    tab.classList.add('popped');
+                    tab.addEventListener('animationend', () => tab.classList.remove('popped'), { once: true });
+                    return;
+                }
+
+                // Remove active state from others
+                projectTabs.forEach(t => t.classList.remove("active"));
+                projectPanels.forEach(panel => panel.classList.remove("active"));
+
+                // Activate clicked tab with elastic pop
+                tab.classList.add("active");
+                tab.classList.add('popped');
+                tab.addEventListener('animationend', () => tab.classList.remove('popped'), { once: true });
+
+                // Activate target panel (CSS handles fade/slide)
+                const target = document.getElementById(targetId);
+                if (target) target.classList.add("active");
+            });
+            // keyboard interaction: Enter/Space triggers click
+            tab.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    tab.click();
+                }
+            });
+        });
+
+       
+        // Time
+        const clockEl = document.getElementById("clock");
+        const formatter = new Intl.DateTimeFormat("it-IT", {
+            timeZone: "Europe/Rome",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: false
+        });
+
+        function updateClock() {
+            clockEl.textContent = formatter.format(new Date());
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
 </body>
-
 </html>
