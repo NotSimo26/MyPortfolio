@@ -12,7 +12,7 @@ async function initViewer() {
         const scene = new THREE.Scene();
         const textureLoader = new THREE.TextureLoader();
         textureLoader.load(
-            './../assets/Purple.png',
+            '/images/Purple.png',
             (texture) => {
                 scene.background = texture;
             },
@@ -55,7 +55,7 @@ async function initViewer() {
         scene.add(backLight);
         
         const mtlLoader = new MTLLoader();
-        mtlLoader.setResourcePath('./../assets/');
+        mtlLoader.setResourcePath('/images');
         
         // Carica il file MTL
         mtlLoader.load('/models/SimoAvatar.mtl', (materials) => {
